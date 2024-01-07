@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #008B8B;
+}
+.container{
+  position: relative;
+  width: 300px;
+}
+.container .inputB{
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 8px 5px;
+  border-radius: 5px;
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, .1);
+}
+.container .inputB input{
+  position: relative;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.container .inputB input[type="username"]{
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.container .inputB #toggleBtn{
+  position: absolute;
+  bottom: 5px;
+  right:10px ;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .1);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .inputB #toggleBtn::before{
+  content: '\f06e';
+  font-family: fontAwesome;
+  color: #000;
+}
+.container .inputB #toggleBtn.hide::before{
+  content: '\f070';
+}
+.validation{
+  background: rgba(0, 0, 0, .4);
+  color: #000;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, .1);
+}
+.validation ul{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.validation ul li{
+  position: relative;
+  list-style: none;
+  color: #fff;
+  font-size: 14px;
+  transition: .3s;
+}
+.validation ul li.valid{
+  color: rgba(255, 255, 255, .5);
+}
+.validation ul li::before{
+  content: '\f192';
+  width: 20px;
+  height: 10px;
+  font-family: fontAwesome;
+  display: inline-flex;
+}
+.validation ul li.valid::before{
+  content: '\f00c';
+  color: #0f0;
+}
